@@ -10,11 +10,9 @@ public class Member {
     private String phone;
     private int admin;
     private Date joinDate;
+       
+    public Member() {}
     
-    public Member() {
-        // TODO Auto-generated constructor stub
-    }
-
     public Member(String userId) {
         this.userId = userId;
     }

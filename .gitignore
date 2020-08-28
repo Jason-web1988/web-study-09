@@ -1,12 +1,11 @@
-/bin/
 /build/
 /.classpath
 /.project
 /.settings/
 
 
-# Created by https://www.toptal.com/developers/gitignore/api/windows,eclipse,dbeaver,java,web,git
-# Edit at https://www.toptal.com/developers/gitignore?templates=windows,eclipse,dbeaver,java,web,git
+# Created by https://www.toptal.com/developers/gitignore/api/eclipse,windows,dbeaver,java,web,git
+# Edit at https://www.toptal.com/developers/gitignore?templates=eclipse,windows,dbeaver,java,web,git
 
 ### DBeaver ###
 # ide config file
@@ -159,4 +158,4 @@ $RECYCLE.BIN/
 # Windows shortcuts
 *.lnk
 
-# End of https://www.toptal.com/developers/gitignore/api/windows,eclipse,dbeaver,java,web,git
+# End of https://www.toptal.com/developers/gitignore/api/eclipse,windows,dbeaver,java,web,git

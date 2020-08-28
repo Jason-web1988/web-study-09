@@ -1,4 +1,4 @@
-package web_study_09.impl;
+package web_study_09.dao.impl;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -123,7 +123,5 @@ public class MemberDaoImpl implements MemberDao {
         }
         return 0;
     }
-
-
 
 }

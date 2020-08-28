@@ -7,11 +7,11 @@ import org.junit.Test;
 
 public class JdbcUtilTest {
 
-	@Test
-	public void testGetConnection() {
-		Connection con = JdbcUtil.getConnection();
-		Assert.assertNotNull(con);
-		System.out.println("con : " + con);
-	}
+    @Test
+    public void testGetConnection() {
+        Connection con = JdbcUtil.getConnection();
+        Assert.assertNotNull(con);
+        System.out.println("con : " + con);
+    }
 
 }
