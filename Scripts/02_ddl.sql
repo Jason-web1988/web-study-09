@@ -1,7 +1,8 @@
+DROP table MEMBER;
 CREATE TABLE member(
-	name	varchar2(10),
-	userid	varchar2(10),
-	pwd		varchar2(10),
+	name	varchar2(20),
+	userid	varchar2(20),
+	pwd		varchar2(20),
 	email	varchar2(20), 
 	phone 	char(13),
 	admin number(1) DEFAULT 0, --0:사용자, 1:관리자

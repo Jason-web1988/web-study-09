@@ -17,7 +17,18 @@ public class Member {
         this.userId = userId;
     }
 
-    public Member(String name, String userId, String pwd, String email, String phone, int admin, Date joinDate) {
+    
+    public Member(String name, String userId, String pwd, String email, String phone, int admin) {
+		super();
+		this.name = name;
+		this.userId = userId;
+		this.pwd = pwd;
+		this.email = email;
+		this.phone = phone;
+		this.admin = admin;
+	}
+
+	public Member(String name, String userId, String pwd, String email, String phone, int admin, Date joinDate) {
         this.name = name;
         this.userId = userId;
         this.pwd = pwd;

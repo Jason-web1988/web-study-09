@@ -10,4 +10,6 @@ public class LoginService {
     public Member getMember(Member member) {
         return dao.selectMemberByUserId(member);
     }
+    
+    
 }
