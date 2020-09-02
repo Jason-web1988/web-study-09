@@ -11,10 +11,9 @@ import javax.servlet.annotation.WebFilter;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
-@WebFilter("/*")
-public class LoginCheckFilter implements Filter {
-
-  
+@WebFilter(urlPatterns = {"/main.jsp"})
+public class LoginCheckFilter implements Filter {  
+	
 	public void destroy() {
 		System.out.println("destroy()");
 	}

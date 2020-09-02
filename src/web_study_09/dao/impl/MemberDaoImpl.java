@@ -106,7 +106,7 @@ public class MemberDaoImpl implements MemberDao {
     @Override
     public int updateMember(Member member) {
         String sql = "UPDATE MEMBER " + 
-                     "   SET NAME=?, PWD=?, EMAIL=?, PHONE=?, ADMIN=?, JOINDATE=?" + 
+                     "   SET NAME=?, PWD=?, EMAIL=?, PHONE=?, ADMIN=?, JOINDATE=sysdate" + 
                      " WHERE USERID = ?";
         try (Connection con = JdbcUtil.getConnection(); 
                 PreparedStatement pstmt = con.prepareStatement(sql)) {
@@ -115,8 +115,8 @@ public class MemberDaoImpl implements MemberDao {
             pstmt.setString(3, member.getEmail());
             pstmt.setString(4, member.getPhone());
             pstmt.setInt(5, member.getAdmin());
-            pstmt.setTimestamp(6, new Timestamp(member.getJoinDate().getTime()));
-            pstmt.setString(7, member.getUserId());
+//            pstmt.setTimestamp(6, new Timestamp(member.getJoinDate().getTime()));
+            pstmt.setString(6, member.getUserId());
             return pstmt.executeUpdate();
         } catch (SQLException e) {
             e.printStackTrace();

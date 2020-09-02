@@ -29,9 +29,13 @@ public class LoginController extends HttpServlet {
 	protected void process(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 	    String url = "member/login.jsp";
 	    
-	    if (request.getMethod().equalsIgnoreCase("get")) {
-	        request.getRequestDispatcher(url).forward(request, response);
-	    }
+	    
+	    if(request.getMethod().equalsIgnoreCase("get")) {
+	    	HttpSession session = request.getSession();
+	    	if(session.getAttribute("loginUser") !=null)
+	    		url = "main.jsp";
+	    	request.getRequestDispatcher(url).forward(request, response);
+	    }else {
 	    
 	    String userId = request.getParameter("userId");
 	    String pwd = request.getParameter("pwd");
@@ -39,7 +43,7 @@ public class LoginController extends HttpServlet {
 	    
 	    Member findMember = new Member(userId);
 	    Member resMember = service.getMember(findMember);
-	    
+	     
 	    if (resMember == null) {
 	        request.setAttribute("message", "존재하지 않는 회원입니다");
 	    }else {
@@ -57,8 +61,7 @@ public class LoginController extends HttpServlet {
     }
 }
 
-
-
+}
 
 
 

@@ -30,6 +30,7 @@ public class JoinController extends HttpServlet {
 	   if (request.getMethod().equalsIgnoreCase("get")) {
     	  request.getRequestDispatcher("member/join.jsp").forward(request, response);
       }
+	   
 	   Member member = getMember(request);
        int res = service.insertMember(member);
        
@@ -43,7 +44,7 @@ public class JoinController extends HttpServlet {
        }
        request.getRequestDispatcher("member/login.jsp").forward(request, response);
    }
-   private Member getMember(HttpServletRequest request) {
+   public static Member getMember(HttpServletRequest request) {
 	   String name = request.getParameter("name");
 	   String userId = request.getParameter("userId");
 	   String pwd =request.getParameter("pwd");
